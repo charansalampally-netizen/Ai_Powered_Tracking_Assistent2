@@ -1,0 +1,105 @@
+ID,Asset Name,Location,Last Maintenance,Department,Status,Next Maintenance
+A001,Dell Laptop,RI Office,2026-06-20,IT,Active,2026-08-15
+A002,Barcode Scanner,Warehouse,2026-05-10,Operations,Active,2026-07-01
+A003,Printer,Finance,2026-04-15,Finance,Maintenance,2026-06-30
+A004,HP EliteBook,HR Office,2026-06-18,HR,Active,2026-08-18
+A005,Lenovo ThinkPad,IT Office,2026-06-12,IT,Active,2026-08-12
+A006,Projector,Conference Room A,2026-05-28,Administration,Active,2026-07-28
+A007,Cisco Router,Server Room,2026-06-05,IT,Active,2026-09-05
+A008,Network Switch,Server Room,2026-05-22,IT,Maintenance,2026-07-22
+A009,Desktop PC,Accounting,2026-06-08,Finance,Active,2026-08-08
+A010,iPad,Sales Office,2026-05-30,Sales,Active,2026-07-30
+A011,Surface Pro,Executive Office,2026-06-14,Management,Active,2026-08-14
+A012,Reception PC,Front Desk,2026-05-25,Administration,Active,2026-07-25
+A013,Label Printer,Warehouse,2026-06-01,Operations,Maintenance,2026-08-01
+A014,Forklift,Warehouse,2026-04-20,Operations,Active,2026-07-20
+A015,Security Camera,Main Entrance,2026-06-10,Security,Active,2026-09-10
+A016,Time Clock,Employee Entrance,2026-05-18,HR,Active,2026-08-18
+A017,Access Point,Floor 2,2026-06-03,IT,Active,2026-09-03
+A018,VoIP Phone,Customer Support,2026-06-11,Support,Active,2026-08-11
+A019,External Hard Drive,IT Storage,2026-05-14,IT,Active,2026-07-14
+A020,NAS Storage,Server Room,2026-05-16,IT,Maintenance,2026-08-16
+A021,UPS Battery,Server Room,2026-04-25,IT,Active,2026-07-25
+A022,Air Conditioner,Server Room,2026-05-12,Facilities,Maintenance,2026-06-26
+A023,Microwave,Break Room,2026-06-09,Facilities,Active,2026-09-09
+A024,Coffee Machine,Break Room,2026-06-07,Facilities,Active,2026-08-07
+A025,Smart TV,Conference Room B,2026-05-27,Administration,Active,2026-08-27
+A026,Webcam,Marketing,2026-06-02,Marketing,Active,2026-08-02
+A027,Wireless Mouse,Design Office,2026-05-21,Design,Active,2026-07-21
+A028,Mechanical Keyboard,Design Office,2026-06-06,Design,Active,2026-08-06
+A029,Graphics Workstation,Design Office,2026-05-17,Design,Maintenance,2026-07-17
+A030,Plotter Printer,Engineering,2026-04-30,Engineering,Active,2026-07-30
+A031,Oscilloscope,Engineering Lab,2026-05-19,Engineering,Active,2026-08-19
+A032,3D Printer,Engineering Lab,2026-06-13,Engineering,Active,2026-09-13
+A033,Laser Cutter,Engineering Lab,2026-05-23,Engineering,Maintenance,2026-07-23
+A034,Tablet,Field Office,2026-06-15,Field Services,Active,2026-08-15
+A035,GPS Device,Field Office,2026-05-24,Field Services,Active,2026-07-24
+A036,Drone,Field Office,2026-05-11,Surveying,Maintenance,2026-08-11
+A037,Scanner,Records Room,2026-06-04,Administration,Active,2026-08-04
+A038,Document Shredder,Records Room,2026-05-26,Administration,Active,2026-07-26
+A039,Cash Register,Retail Store,2026-06-16,Retail,Active,2026-08-16
+A040,POS Terminal,Retail Store,2026-06-17,Retail,Active,2026-08-17
+A041,Receipt Printer,Retail Store,2026-05-29,Retail,Maintenance,2026-07-29
+A042,Card Reader,Retail Store,2026-06-19,Retail,Active,2026-08-19
+A043,Inventory Scanner,Warehouse,2026-05-13,Operations,Active,2026-07-13
+A044,Pallet Jack,Warehouse,2026-04-28,Operations,Active,2026-07-28
+A045,Industrial Fan,Warehouse,2026-05-20,Facilities,Maintenance,2026-07-20
+A046,Generator,Maintenance Shed,2026-04-18,Facilities,Active,2026-07-18
+A047,Power Washer,Maintenance Shed,2026-05-15,Facilities,Active,2026-08-15
+A048,Vacuum Cleaner,Janitorial Closet,2026-06-01,Facilities,Active,2026-09-01
+A049,Floor Scrubber,Janitorial Closet,2026-05-09,Facilities,Maintenance,2026-07-09
+A050,Fire Extinguisher A1,Hallway 1,2026-06-10,Security,Active,2026-12-10
+A051,Fire Extinguisher A2,Hallway 2,2026-06-10,Security,Active,2026-12-10
+A052,Smoke Detector 01,Office Wing,2026-05-31,Security,Active,2026-11-30
+A053,Smoke Detector 02,Warehouse,2026-05-31,Security,Active,2026-11-30
+A054,AED Unit,Lobby,2026-06-05,Health & Safety,Active,2026-12-05
+A055,Medical Kit,Warehouse,2026-06-08,Health & Safety,Active,2026-09-08
+A056,Refrigerator,Break Room,2026-05-22,Facilities,Active,2026-08-22
+A057,Water Cooler,Floor 1,2026-06-03,Facilities,Active,2026-09-03
+A058,Monitor 24in,Sales Office,2026-06-14,Sales,Active,2026-08-14
+A059,Monitor 27in,Marketing,2026-06-12,Marketing,Active,2026-08-12
+A060,MacBook Pro,Marketing,2026-06-18,Marketing,Active,2026-08-18
+A061,Dell Docking Station,IT Office,2026-05-30,IT,Active,2026-07-30
+A062,USB Hub,IT Office,2026-06-06,IT,Active,2026-08-06
+A063,Ethernet Tester,IT Storage,2026-05-28,IT,Maintenance,2026-08-28
+A064,Fiber Tester,IT Storage,2026-05-18,IT,Active,2026-08-18
+A065,Patch Panel,Server Room,2026-06-09,IT,Active,2026-09-09
+A066,Rack Server 01,Server Room,2026-06-07,IT,Active,2026-09-07
+A067,Rack Server 02,Server Room,2026-05-25,IT,Maintenance,2026-08-25
+A068,Backup Server,Server Room,2026-05-16,IT,Active,2026-08-16
+A069,Firewall Appliance,Server Room,2026-06-02,IT,Active,2026-09-02
+A070,Conference Speaker,Conference Room A,2026-06-04,Administration,Active,2026-08-04
+A071,Wireless Microphone,Conference Room A,2026-05-19,Administration,Active,2026-07-19
+A072,Digital Whiteboard,Conference Room B,2026-06-11,Administration,Active,2026-09-11
+A073,Bluetooth Speaker,Training Room,2026-06-13,Training,Active,2026-08-13
+A074,Training Laptop 01,Training Room,2026-05-20,Training,Active,2026-07-20
+A075,Training Laptop 02,Training Room,2026-05-21,Training,Active,2026-07-21
+A076,Training Laptop 03,Training Room,2026-05-22,Training,Maintenance,2026-07-22
+A077,Training Laptop 04,Training Room,2026-05-23,Training,Active,2026-07-23
+A078,Training Laptop 05,Training Room,2026-05-24,Training,Active,2026-07-24
+A079,Digital Camera,Marketing,2026-06-01,Marketing,Active,2026-09-01
+A080,DSLR Lens Kit,Marketing,2026-05-17,Marketing,Active,2026-08-17
+A081,Lighting Kit,Studio,2026-06-05,Marketing,Active,2026-09-05
+A082,Green Screen,Studio,2026-05-29,Marketing,Maintenance,2026-08-29
+A083,VR Headset,R&D Lab,2026-06-15,R&D,Active,2026-09-15
+A084,AR Glasses,R&D Lab,2026-05-18,R&D,Active,2026-08-18
+A085,Test Laptop,R&D Lab,2026-06-10,R&D,Maintenance,2026-08-10
+A086,Prototype Sensor,R&D Lab,2026-05-26,R&D,Active,2026-08-26
+A087,Temperature Sensor,Warehouse,2026-06-02,Operations,Active,2026-09-02
+A088,Humidity Sensor,Warehouse,2026-06-03,Operations,Active,2026-09-03
+A089,Motion Sensor,Warehouse,2026-05-27,Security,Active,2026-08-27
+A090,Electric Drill,Maintenance Shed,2026-05-14,Facilities,Active,2026-08-14
+A091,Tool Chest,Maintenance Shed,2026-05-31,Facilities,Active,2026-08-31
+A092,Ladder,Maintenance Shed,2026-06-06,Facilities,Active,2026-09-06
+A093,Extension Cord,Maintenance Shed,2026-05-30,Facilities,Active,2026-08-30
+A094,Network Cable Tester,IT Storage,2026-06-01,IT,Maintenance,2026-09-01
+A095,HDMI Switch,Conference Room C,2026-06-08,Administration,Active,2026-08-08
+A096,Portable Projector,Sales Office,2026-05-15,Sales,Active,2026-08-15
+A097,Chromebook,Education Center,2026-06-12,Training,Active,2026-08-12
+A098,Interactive Display,Education Center,2026-05-28,Training,Active,2026-08-28
+A099,Server Rack Fan,Server Room,2026-06-09,IT,Active,2026-09-09
+A100,Battery Backup Unit,Server Room,2026-05-13,IT,Maintenance,2026-08-13
+A101,Security Alarm Panel,Security Office,2026-06-07,Security,Active,2026-09-07
+A102,Key Card Reader,Main Entrance,2026-06-16,Security,Active,2026-09-16
+A103,Digital Signage Display,Lobby,2026-05-25,Marketing,Active,2026-08-25
+A104,Conference Tablet,Conference Room C,2026-06-14,Administration,Active,2026-08-14
