@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.write("The app started successfully")
+st.write("The app started successfully!")
 
 from utils import (
     load_assets,
