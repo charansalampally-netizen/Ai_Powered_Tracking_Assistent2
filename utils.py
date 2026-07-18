@@ -263,3 +263,4 @@ def process_question(df, question):
         "• Show assets in Finance\n"
         "• Which assets have not been seen recently?"
     )
+
