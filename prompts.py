@@ -1,10 +1,19 @@
 WELCOME_MESSAGE = """
-Welcome to the Asset-Tracking Assistant!
+Welcome to the Asset Tracking Assistant!
 
-Ask questions such as:
+You can ask questions such as:
+- Where is asset A001?
+- Where is the Dell Laptop?
+- Which assets are due for maintenance?
+- Show all active assets.
+- Show assets in Finance.
+"""
 
-• Where is the Dell Laptop?
-• Which assets need maintenance?
-• Which assets have not been seen recently?
-• Show all active assets.
+HELP_TEXT = """
+Try asking:
+- Where is asset A001?
+- Which assets are due for maintenance?
+- Show inactive assets.
+- Show assets in Finance.
+- Which assets have not been seen recently?
 """

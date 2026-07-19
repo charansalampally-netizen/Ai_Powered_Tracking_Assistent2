@@ -1,179 +1,83 @@
 import streamlit as st
-import pandas as pd
-
-st.write("The app started successfully!")
 
 from utils import (
-    load_assets,
-    process_question,
     active_assets,
-    assets_due_for_maintenance
+    assets_due_for_maintenance,
+    assets_not_seen_recently,
+    load_assets,
+    query_assets,
 )
-
-# --------------------------------------------------
-# Page Configuration
-# --------------------------------------------------
 
 st.set_page_config(
     page_title="Asset Tracking Assistant",
-    page_icon="💻",
-    layout="wide"
+    page_icon="💼",
+    layout="wide",
 )
 
-# --------------------------------------------------
-# Load Asset Data
-# --------------------------------------------------
+st.title("💻 Asset Tracking Assistant")
+st.markdown(
+    """
+    Welcome to the Asset Tracking Assistant.
+
+    Ask natural language questions about your company assets.
+
+    Examples:
+    - Where is asset A001?
+    - Which assets have not been seen in 30 days?
+    - Show maintenance due assets.
+    - List inactive assets.
+    - Show assets in Finance.
+    """
+)
 
 try:
     df = load_assets()
-
-except Exception as e:
-    st.error(f"Error loading asset data:\n\n{e}")
+except Exception as exc:
+    st.error(f"Error loading asset data: {exc}")
     st.stop()
 
-# --------------------------------------------------
-# Title
-# --------------------------------------------------
-
-st.title("💻 Asset Tracking Assistant")
-
-st.write("""
-Welcome to the Asset Tracking Assistant!
-
-Ask questions such as:
-
-- Where is asset A001?
-- Where is the Dell Laptop?
-- Show maintenance due assets.
-- Show all active assets.
-- Show assets in Finance.
-- Which assets have not been seen recently?
-""")
-
-# --------------------------------------------------
-# Dashboard Metrics
-# --------------------------------------------------
-
 total_assets = len(df)
-
 active_count = len(active_assets(df))
-
-maintenance_count = len(
-    df[df["Status"].str.lower() == "maintenance"]
-)
-
-overdue_count = len(
-    assets_due_for_maintenance(df)
-)
+maintenance_count = len(assets_due_for_maintenance(df))
+not_seen_count = len(assets_not_seen_recently(df))
 
 col1, col2, col3, col4 = st.columns(4)
+col1.metric("Total assets", total_assets)
+col2.metric("Active assets", active_count)
+col3.metric("Maintenance due", maintenance_count)
+col4.metric("Not seen in 30 days", not_seen_count)
 
-with col1:
-    st.metric("Total Assets", total_assets)
+st.markdown("---")
 
-with col2:
-    st.metric("Active Assets", active_count)
+if "history" not in st.session_state:
+    st.session_state.history = []
 
-with col3:
-    st.metric("Under Maintenance", maintenance_count)
-
-with col4:
-    st.metric("Overdue Maintenance", overdue_count)
-
-st.divider()
-
-# --------------------------------------------------
-# Chat History
-# --------------------------------------------------
-
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-for message in st.session_state.messages:
-
-    with st.chat_message(message["role"]):
-
-        if isinstance(message["content"], pd.DataFrame):
-
-            st.dataframe(
-                message["content"],
-                use_container_width=True
-            )
-
-        else:
-
-            st.write(message["content"])
-
-# --------------------------------------------------
-# Chat Input
-# --------------------------------------------------
-
-prompt = st.chat_input("Ask a question about your assets...")
-
-# --------------------------------------------------
-# Process Question
-# --------------------------------------------------
-
-if prompt:
-
-    # Display user message
-
-    st.session_state.messages.append(
-        {
-            "role": "user",
-            "content": prompt
-        }
+with st.form("question_form"):
+    question = st.text_input(
+        "Ask a question about company assets",
+        placeholder="Where is Laptop A001?",
+        key="question_input",
     )
+    submitted = st.form_submit_button("Submit")
 
-    with st.chat_message("user"):
-        st.write(prompt)
+if submitted:
+    if not question:
+        st.warning("Please enter a question before submitting.")
+    else:
+        answer = query_assets(df, question)
+        st.session_state.history.append({
+            "question": question,
+            "answer": answer,
+        })
 
-    # Generate response
-
-    answer = process_question(df, prompt)
-
-    # Display assistant response
-
-    with st.chat_message("assistant"):
-
-        if isinstance(answer, pd.DataFrame):
-
-            if answer.empty:
-
-                st.write("No matching assets were found.")
-
-                st.session_state.messages.append(
-                    {
-                        "role": "assistant",
-                        "content": "No matching assets were found."
-                    }
-                )
-
-            else:
-
-                st.write(
-                    f"I found {len(answer)} matching asset(s)."
-                )
-
-                st.dataframe(
-                    answer,
-                    use_container_width=True
-                )
-
-                st.session_state.messages.append(
-                    {
-                        "role": "assistant",
-                        "content": answer
-                    }
-                )
-
+if st.session_state.history:
+    st.markdown("### Chat history")
+    for entry in st.session_state.history:
+        st.markdown(f"**You:** {entry['question']}")
+        if isinstance(entry["answer"], str):
+            st.markdown(f"**Assistant:** {entry['answer']}")
         else:
-
-            st.write(answer)
-
-            st.session_state.messages.append(
-                {
-                    "role": "assistant",
-                    "content": answer
-                }
-            )
+            st.markdown(f"**Assistant:** Found {len(entry['answer'])} matching asset(s)")
+            st.dataframe(entry["answer"], use_container_width=True)
+else:
+    st.info("Ask a question to see answers about assets.")
